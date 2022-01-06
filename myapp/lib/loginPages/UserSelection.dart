@@ -24,7 +24,7 @@ class UserSelectionPage extends StatelessWidget {
                 onTap: (){
                 Navigator.push(
                     context, 
-                    MaterialPageRoute(builder: (context)=>teacherDashboard())
+                    MaterialPageRoute(builder: (context)=>studentDashboard())
                     );
                 },
                 child: Container(

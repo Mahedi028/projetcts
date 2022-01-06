@@ -31,14 +31,27 @@ class _teacherDashboardState extends State<teacherDashboard> {
               child: ListView(
                 children: [
                   DrawerHeader(
-                    child: Image.network(
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxiJIU6WoDEBrr5RXFdLsOSAHXKEk2othRAA&usqp=CAU',
-                      height: 200,
-                      width: 200,
-                      color: Colors.black12,
+                    child: Column(
+                      children: [
+                       ClipRect(
+                      child: Align(
+                        alignment: Alignment.topCenter,
+                        heightFactor: 0.8,
+                        child: Image.network(
+                          'https://i0.wp.com/nofiredrills.com/wp-content/uploads/2016/10/myavatar.png?fit=400%2C400&ssl=1',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                          ),
                       ),
+                    ),
+                        Text('Mr.Touhid')
+                    ],
+                    ),
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topCenter,
                         colors: [
                           Colors.purple,
                           Colors.purpleAccent,
@@ -52,7 +65,7 @@ class _teacherDashboardState extends State<teacherDashboard> {
                       leading: Icon(
                         Icons.home,
                         size: 18,
-                        color: Colors.black12,
+                        color: Colors.black,
                         ),
                       title: Text('Home'),
                       onTap: (){
