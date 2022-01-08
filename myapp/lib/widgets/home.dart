@@ -45,6 +45,7 @@ class Home extends StatelessWidget{
             style: TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.bold,
+              color: Colors.black
             ),
             textAlign: TextAlign.center,
             ),
@@ -53,7 +54,7 @@ class Home extends StatelessWidget{
             className.toString(),
             style: TextStyle(
               fontSize: 15,
-              color: Colors.white,
+              color: Colors.black,
               fontWeight: FontWeight.bold,
 
             ),

@@ -48,11 +48,19 @@ class UserSelectionPage extends StatelessWidget {
                 child: Column(
                   children: [
                     Image.asset(
-                      'assets/images/Teacher.png',
+                      'assets/images/male.png',
                       width: 300,
                       height: 300,
                       fit: BoxFit.cover,
                       ),
+                      Text(
+                        'Student',
+                        style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white
+                        ),
+                        ),
                       Align(
                         alignment: Alignment.center,
                   //       child:    RaisedButton(
@@ -102,11 +110,12 @@ class UserSelectionPage extends StatelessWidget {
                 child: Column(
                   children: [
                     Image.asset(
-                      'assets/images/teacher.png',
+                      'assets/images/Teacher.png',
                       width: 300,
                       height: 300,
                       fit: BoxFit.cover,
                       ),
+                    
                       Align(
                         alignment: Alignment.center,
                   //       child:    RaisedButton(

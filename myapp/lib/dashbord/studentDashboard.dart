@@ -11,13 +11,14 @@ class _studentDashboardState extends State<studentDashboard> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'StudentDashboard',
+      theme: ThemeData.dark(),
       home: Scaffold(
         appBar: AppBar(
           centerTitle: true,
           title: Text(
             'StudentDashboard',
             style: TextStyle(
-              color: Colors.black,
+              color: Colors.white,
               fontSize: 25,
               fontWeight: FontWeight.bold
             ),
@@ -57,7 +58,8 @@ class _studentDashboardState extends State<studentDashboard> {
                       'Mahedihasan',
                       style: TextStyle(
                         fontSize: 25,
-                        fontWeight: FontWeight.bold
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black
                       ),
                       ),
                 ],
@@ -145,7 +147,6 @@ class _studentDashboardState extends State<studentDashboard> {
                       ),
                       ),
                       onTap: (){
-                        print('Report');
                       },  
                 ),
                 ListTile(
@@ -162,17 +163,20 @@ class _studentDashboardState extends State<studentDashboard> {
                       ),
                       ),
                       onTap: (){
+
                         
                       },  
                 ),
             ],
             ),
         ),
-        body:Wrap(
+        body:Center(child: Wrap(
+          direction: Axis.vertical,
           spacing: 40,
           runSpacing: 10,
           alignment: WrapAlignment.center,
-           children: [
+          crossAxisAlignment: WrapCrossAlignment.center,
+           children: [ 
             Home(
               number:4 ,
               className: 'Math',
@@ -198,6 +202,7 @@ class _studentDashboardState extends State<studentDashboard> {
          
         
       ),
+      )
     );
   }
 }

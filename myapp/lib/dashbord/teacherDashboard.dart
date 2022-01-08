@@ -1,4 +1,5 @@
 import'package:flutter/material.dart';
+import 'package:myapp/widgets/home.dart';
 
 
 class teacherDashboard extends StatefulWidget {
@@ -12,9 +13,7 @@ class _teacherDashboardState extends State<teacherDashboard> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'teacherDashboard',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData.dark(),
       home: Scaffold(
         appBar: AppBar(
           centerTitle: true,
@@ -38,10 +37,10 @@ class _teacherDashboardState extends State<teacherDashboard> {
                         alignment: Alignment.topCenter,
                         heightFactor: 0.8,
                         child: Image.network(
-                          'https://i0.wp.com/nofiredrills.com/wp-content/uploads/2016/10/myavatar.png?fit=400%2C400&ssl=1',
+                          'https://cdn-icons-png.flaticon.com/512/194/194935.png',
                           width: 100,
                           height: 100,
-                          fit: BoxFit.cover,
+                          fit: BoxFit.contain,
                           ),
                       ),
                     ),
@@ -63,40 +62,40 @@ class _teacherDashboardState extends State<teacherDashboard> {
                     ),
                     ListTile(
                       leading: Icon(
-                        Icons.home,
+                        Icons.settings,
                         size: 18,
                         color: Colors.black,
                         ),
-                      title: Text('Home'),
+                      title: Text('Settings'),
                       onTap: (){
 
                       },
                     ),
                     ListTile(
                       leading: Icon(
-                        Icons.home,
+                        Icons.email,
                         size: 18,
                         color: Colors.black12,
                         ),
-                      title: Text('Home'),
+                      title: Text('email'),
                       onTap: (){
 
                       },
                     ),
                     ListTile(
                       leading: Icon(
-                        Icons.home,
+                        Icons.logout,
                         size: 18,
                         color: Colors.black12,
                         ),
-                      title: Text('Home'),
+                      title: Text('Log out'),
                       onTap: (){
 
                       },
                     ),
                     ListTile(
                       leading: Icon(
-                        Icons.home,
+                        Icons.mark_chat_unread_sharp,
                         size: 18,
                         color: Colors.black12,
                         ),
@@ -110,7 +109,37 @@ class _teacherDashboardState extends State<teacherDashboard> {
               ),
                 
               ),
-            ),
+              body: Center(child: Wrap(
+          direction: Axis.vertical,
+          spacing: 40,
+          runSpacing: 10,
+          alignment: WrapAlignment.center,
+          crossAxisAlignment: WrapCrossAlignment.center,
+           children: [ 
+            Home(
+              number:4 ,
+              className: 'Result',
+              myColor:Colors.orange ,
+              ),
+            Home(
+              number:4 ,
+              className: 'MarkSheet',
+              myColor:Colors.purple ,
+              ),
+            Home(
+              number:4 ,
+              className: 'Chemistry',
+              myColor:Colors.red ,
+              ),
+            Home(
+              number:4 ,
+              className: 'ict',
+              myColor:Colors.orange ,
+              ),
+          ],
+        )
+      ),
+      ),
     );
   }
 }
